@@ -9,6 +9,7 @@ This project was done as part of a demonstration regarding NodeJs experience.
 - Node
 - Express
 - Typescript
+- Redis
 
 ## Requirement
 
@@ -36,7 +37,7 @@ Example Output:
 
 ## Running the project
 
-To initialize this project, run `docker compose up` from the root of this project. This will build and run both API and UI project.
+To initialize this project, run `docker compose up` from the root of this project. This will build and run **Redis**, **API** and **UI** project.
 
 Beside update the `.env` file with the following values:
 
@@ -51,4 +52,3 @@ Beside update the `.env` file with the following values:
 
 1.  Imporve Testing structure
 2.  Add API testing for Pokemon and Species
-3.  Add Caching for imporve response and performance
