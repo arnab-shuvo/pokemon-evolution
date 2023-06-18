@@ -1,9 +1,9 @@
-import express, { Express, Request, Response, Router } from "express";
-import { EvolutionController } from "../controller/evolution/evolution.controller";
+import { Router } from "express";
+import EvolutionController from "../evolution/evolution.controller";
 
-const evolutionRouter: Router = express.Router();
+const evolutionRouter: Router = Router();
 const evolutionController = new EvolutionController();
 
-evolutionRouter.get("/", evolutionController.getAll);
+evolutionRouter.get("/chain/:name", evolutionController.getChainByName);
 
 export default evolutionRouter;

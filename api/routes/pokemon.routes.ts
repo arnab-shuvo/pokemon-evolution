@@ -1,9 +1,9 @@
-import express, { Express, Request, Response, Router } from "express";
-import { PokemonController } from "../controller/pokemon/pokemon.controller";
+import { Router } from "express";
+import PokemonController from "../pokemon/pokemon.controller";
 
-const pokemonRouter: Router = express.Router();
+const pokemonRouter: Router = Router();
 const pokemonController = new PokemonController();
 
-pokemonRouter.get("/", pokemonController.getAll);
+pokemonRouter.get("/:name", pokemonController.getByName);
 
 export default pokemonRouter;

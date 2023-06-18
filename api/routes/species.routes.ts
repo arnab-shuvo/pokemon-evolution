@@ -1,9 +1,9 @@
-import express, { Express, Request, Response, Router } from "express";
-import { SpeciesController } from "../controller/species/species.controller";
+import { Router } from "express";
+import SpeciesController from "../species/species.controller";
 
-const speciesRouter: Router = express.Router();
+const speciesRouter: Router = Router();
 const speciesController = new SpeciesController();
 
-speciesRouter.get("/", speciesController.getAll);
+speciesRouter.get("/:id", speciesController.getById);
 
 export default speciesRouter;
