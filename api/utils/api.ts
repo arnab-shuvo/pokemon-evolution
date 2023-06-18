@@ -13,6 +13,7 @@ export default class ApiInterface {
     const response = await axios.get(reqUrl, {
       ...this.baseOpts,
     });
+
     return response.data;
   };
   public post = <T>(url: string, body: unknown): Promise<T> => {

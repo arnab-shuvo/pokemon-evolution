@@ -15,7 +15,6 @@ export interface ISpecies {
 }
 export type ChainNode = {
   evolves_to: ChainNode[];
-  is_baby: boolean;
   species: {
     name: string;
   };

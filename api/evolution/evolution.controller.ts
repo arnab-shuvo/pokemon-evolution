@@ -1,11 +1,15 @@
 import { Request, Response } from "express";
 import EvolutionService from "./evolution.service";
+import PokemonService from "../pokemon/pokemon.service";
+import SpeciesService from "../species/species.service";
 
 export default class EvolutionController {
-  //   constructor(private readonly service: ProductService) {}
   private evolutionService: EvolutionService;
   constructor() {
-    this.evolutionService = new EvolutionService();
+    this.evolutionService = new EvolutionService(
+      new PokemonService(),
+      new SpeciesService()
+    );
   }
 
   public getChainByName = async (req: Request, res: Response) => {

@@ -8,10 +8,10 @@ export default class EvolutionService {
   private readonly apiInteface: ApiInterface;
   private readonly pokemonService: PokemonService;
   private readonly speciesService: SpeciesService;
-  constructor() {
+  constructor(pokemonService: PokemonService, speciesService: SpeciesService) {
     this.apiInteface = new ApiInterface();
-    this.pokemonService = new PokemonService();
-    this.speciesService = new SpeciesService();
+    this.pokemonService = pokemonService;
+    this.speciesService = speciesService;
   }
 
   public chainByName = async (name: string) => {
@@ -22,6 +22,7 @@ export default class EvolutionService {
     );
     const evoChainUrl = species.evolution_chain.url;
     const evoChain: IEvolution = await this.apiInteface.get(evoChainUrl, true);
+
     return chainFormatter(evoChain.chain);
   };
 }
