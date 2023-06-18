@@ -9,4 +9,7 @@ export default class PokemonService {
   public getByName = <T>(name: string): Promise<T> => {
     return this.apiInteface.get(`pokemon/${name}`);
   };
+  public getAll = <T>(): Promise<T> => {
+    return this.apiInteface.get("pokemon");
+  };
 }

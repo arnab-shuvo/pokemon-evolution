@@ -16,4 +16,12 @@ export default class PokemonController {
       res.status(500).json("Something went wrong....");
     }
   };
+  public getAll = async (req: Request, res: Response) => {
+    try {
+      const pokemonInfo = await this.pokemonService.getAll();
+      res.json(pokemonInfo);
+    } catch (error) {
+      res.status(500).json("Something went wrong....");
+    }
+  };
 }
