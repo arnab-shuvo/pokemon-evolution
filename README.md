@@ -2,7 +2,7 @@
 
 This project was done as part of a demonstration regarding NodeJs experience.
 
-![image description](screenshot/Screenshot 2023-06-20 at 00.23.40.png)
+![Pokemon-evolution]([screenshot/Screenshot 2023-06-20 at 00.23.40.png](https://github.com/arnab-shuvo/pokemon-evolution/blob/main/screenshot/screenshot.png?raw=true))
 
 ## Prerequisity
 
