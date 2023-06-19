@@ -2,6 +2,8 @@
 
 This project was done as part of a demonstration regarding NodeJs experience.
 
+![image description](screenshot/Screenshot 2023-06-20 at 00.23.40.png)
+
 ## Prerequisity
 
 - Docker
