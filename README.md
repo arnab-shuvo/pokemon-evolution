@@ -37,11 +37,17 @@ Example Output:
 
 ## Running the project
 
-To initialize this project, run `docker compose up` from the root of this project. This will build and run **Redis**, **API** and **UI** project.
+To initialize this project, run `docker compose up` from the root of this project. This will run **Redis**, **API** and **UI** project.
 
-Beside update the `.env` file with the following values:
+Beside update the `.env` file under `api` folder with the following values:
 
     PORT=8080
+
+Lastly update the `.env` file under `ui` folder with the following values:
+
+    REACT_APP_API_BASE_URL=http://localhost:8080/
+
+The UI Project will run on `3000` port as default. The url to access the UI is: http://localhost:3000/
 
 ## API Documentation
 
