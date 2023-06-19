@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useEffect } from "react";
 import logo from "./logo.svg";
 import "./App.css";
+import Home from "./pages/home";
 
 function App() {
-  return <>atnab</>;
+  return <Home />;
 }
 
 export default App;

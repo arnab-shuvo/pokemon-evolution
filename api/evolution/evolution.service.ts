@@ -24,6 +24,7 @@ export default class EvolutionService {
     }
 
     const pokemon: IPokemon = await this.pokemonService.getByName(name);
+    if (!pokemon) return [];
     const speciesUrl = pokemon.species.url;
     const species: ISpecies = await this.speciesService.getSpeciesByUrl(
       speciesUrl
@@ -31,8 +32,8 @@ export default class EvolutionService {
     const evoChainUrl = species.evolution_chain.url;
     const evoChain: IEvolution = await this.apiInteface.get(evoChainUrl, true);
 
-    const response = JSON.stringify(chainFormatter(evoChain.chain));
-    setCache(cacheKey, response);
+    const response = chainFormatter(evoChain.chain);
+    setCache(cacheKey, JSON.stringify(response));
     return response;
   };
 }

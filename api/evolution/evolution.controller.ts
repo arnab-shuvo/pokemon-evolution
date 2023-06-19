@@ -19,7 +19,6 @@ export default class EvolutionController {
       res.json(evolutionChain);
     } catch (error) {
       console.log(error);
-
       res.status(500).json("Something Went Wrong....");
     }
   };
