@@ -52,6 +52,7 @@ const Home: React.FC = () => {
             style={{ borderTopRightRadius: 0, borderBottomRightRadius: 0 }}
             variant="outlined"
             fullWidth
+            inputProps={{ "data-testid": "pokemon-name-input" }}
             placeholder="Enter a pokemon name"
             {...register("pokemonName", { required: true, minLength: 2 })}
           />
@@ -66,6 +67,7 @@ const Home: React.FC = () => {
             type="submit"
             fullWidth
             color="warning"
+            data-testid="submit-button"
             style={{
               marginTop: 10,
             }}
@@ -77,7 +79,7 @@ const Home: React.FC = () => {
         {pokemonName && (
           <Grid item md={12}>
             <Typography variant="h6">Vartion:</Typography>
-            <Typography variant="h5">
+            <Typography variant="h5" data-testid={"searched-pokemon-name"}>
               <b style={{ textTransform: "capitalize" }}>{pokemonName}</b>
             </Typography>
 
