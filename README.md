@@ -1,8 +1,9 @@
+
 ## Welcome to Pokemon evolution chain project !!!
 
 This project was done as part of a demonstration regarding NodeJs experience.
 
-![Pokemon-evolution]([screenshot/Screenshot 2023-06-20 at 00.23.40.png](https://github.com/arnab-shuvo/pokemon-evolution/blob/main/screenshot/screenshot.png?raw=true))
+![enter image description here](https://raw.githubusercontent.com/arnab-shuvo/pokemon-evolution/main/screenshot/screenshot.png)
 
 ## Prerequisity
 
