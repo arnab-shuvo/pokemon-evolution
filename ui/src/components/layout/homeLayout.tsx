@@ -1,5 +1,5 @@
 import React, { PropsWithChildren } from "react";
-import { ContentBox, LogoBox, UserLayoutWrapper } from "./styled";
+import { ContentBox, UserLayoutWrapper } from "./styled";
 
 const UserLayout: React.FC<PropsWithChildren> = ({ children }) => {
   return (

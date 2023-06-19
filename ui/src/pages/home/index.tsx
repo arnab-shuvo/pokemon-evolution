@@ -31,7 +31,9 @@ const Home: React.FC = () => {
     setIsLoading(true);
     try {
       const { data } = await axios.get(
-        `http://localhost:8080/evolution/chain/${pokemon.pokemonName.toLowerCase()}`
+        `${
+          process.env.REACT_APP_API_BASE_URL
+        }evolution/chain/${pokemon.pokemonName.toLowerCase()}`
       );
       setChain(simpler(data));
       setPokemonName(pokemon.pokemonName);

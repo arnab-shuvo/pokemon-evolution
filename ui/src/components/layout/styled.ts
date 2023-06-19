@@ -22,7 +22,3 @@ export const ContentBox = styled(Grid)({
   background: "rgba(255,255,255,0.8)",
   borderRadius: "10px",
 });
-export const LogoBox = styled(Grid)({
-  position: "relative",
-  zIndex: 22222,
-});
